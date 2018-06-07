@@ -1,0 +1,73 @@
+body{
+	margin : 0;
+	overflow-x: hidden;
+	background-image:url("C:/Users/yannt/Desktop/site-Heavenstone/imageville.jpg"); 
+}
+
+#banner1 {
+	display: block;
+	background-image: url("C:/Users/yannt/Desktop/site-Heavenstone/rouleau2.jpg");
+	height:50px;
+	width:100%;
+}
+#menu {
+	min-width: 1200px;
+	background-image: url("C:/Users/yannt/Desktop/site-Heavenstone/rouleau4.jpg");
+	height:100px;
+	width:100%;
+	position:relative;
+}
+#menu ul {
+float : left;
+left:50%;
+position:relative;
+padding-top: 15px;
+margin-left:-70px;
+}
+
+#menu ul li{
+	margin-left: 20px;
+	float:left;
+	list-style-type: none;
+	position: relative;
+	left :-50%;
+}
+#menu ul li a {
+	display: inline-block;
+	height : 30px;
+	width: 180px;
+	color: black;
+	text-decoration:none;
+	position:relative;
+}
+#banner2 {
+	display: block;
+	background-image: url("C:/Users/yannt/Desktop/site-Heavenstone/rouleau2.jpg");
+	height:50px;
+	width:100%;
+	position:relative;
+}
+#contenuprincipal {
+	display:block;
+	width:90%;
+	margin:auto;
+	position: relative;
+}
+#contenuprincipal p {
+	display: inline-block;
+	background-image:url("C:/Users/yannt/Desktop/site-Heavenstone/rouleau7.jpg");
+
+}
+#banner3 {
+display: block;
+	background-image: url("C:/Users/yannt/Desktop/site-Heavenstone/rouleau2.jpg");
+	height:50px;
+	width:100%;
+	position:relative;
+	margin:auto;
+
+}
+#banner3 p {
+	margin:auto;
+	text-align: center;
+}

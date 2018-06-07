@@ -1,0 +1,100 @@
+
+<html>
+   <head>
+       <meta charset="utf-8">
+       <title>HeavenStone</title>
+       <link rel="stylesheet" type="text/css" href="style.css"  />
+    </head>
+	<body>
+	<div id ="banner1">
+	</div>
+	    <div id ="Menu">
+	        <ul>
+	             <li><a href = "new1.html">NEWS</a></li>
+	             <li><a href = "Univers.html">UNIVERS</a></li>
+	             <li><a href = "Inscription.html">INSCRIPTION</a></li>
+	             <li><a href = "téléchargement.html">TELECHARGEMENT</a>
+	             <li><a href = "Support.html">SUPPORT</a></li>
+
+	        </ul>
+	    </div>
+	    <div id = "banner2">
+	    </div>
+	    <div id = "contenuprincipal">
+            <p>
+              Historique:
+              <br/>
+              HeavenStone est un projet de création d'un jeu vidéo de type Tactical RPG en tour par tour. Le projet a eu des débuts difficiles, l'équipe du projet a très souvent changée avant de devenir stable. Ce projet est créée a partir du logiciel Unity 3D et est coder en c#
+              <br/>
+              <br/>
+              Il y a actuellement trois personnes qui travaillent sur le projet:
+              <br/>
+              <br/>
+              -Adrien MOLLAT
+              <br/>
+              -Francois MACHURON
+              <br/>
+              -Yann TSATSARIS
+              <br/>
+              <br/>
+              <br/><br/>
+              <br/>
+              SECONDE SOUTENANCE:
+              <br/>
+              <br/>
+              Le système d'inventaire:
+              <br/>
+              <br/>
+              Pour cette soutenance, un système d’inventaire a été rajouté. Pour cela, nous avons utiliser un asset très utile appelé « Inventory master ». Il permet de créer un inventaire plus facilement permettant au joueur d’interagir avec des items à l’aide de scripts. 
+Le premier travail aura été de créer le design de l’inventaire, car le modèle d’inventaire de l’asset n’allait pas du tout avec notre univers. Nous avons donc recherché un panel qui corresponde mieux à l’univers de notre jeu et nous l’avons implémenté à la place de l’inventaire de base.
+ Ensuite, nous avons créer plusieurs Item en choisissant nous même l’icone qui leur correspond dans l’inventaire, leur apparence 3D dans le jeu, leur nom, leur description qui sera affichée lorsque la souris passera dessus, le type de l’objet (consommable, arme, armure, objet de quête etc.) ainsi que les bonus que donne l’objet en question.
+Nous avons également assigné un ID à chaque item dans la Data Base pour pouvoir le retrouver plus facilement et le manipuler à l’aide de script. Grâce a toutes ces données on a donc pu faire en sorte que le joueur puisse par exemple ramasser des buches au sol en s’approchant et en appuyant sur la touche d’action, et qu’elles apparaissent dans l’inventaire avec leur Sprite 2D , leur description et la quantité de l’objet en question. 
+
+              <br/>
+              <br/>
+              Le système d'équipement:
+              <br/>
+              <br/>
+              Il fonctionne à peu près pareil que le système d’inventaire et comme on peut s’y attendre il y est étroitement lié. Le système d’équipement est une fenêtre qui ressemble à l’inventaire mais qui n’a pas la même fonctionnalité. L’inventaire sert à stocker des objets alors que le système d’équipement sert à les utiliser en les équipant.
+ Vous l’aurez deviné, cette fenêtre de concerne donc que les Item de type Arme ou Armure. Le système d’équipement possède différents slots qui correspondent chacun a une pièce d’armure différente ou une arme. Par exemple, le slot utilisé pour y placer l’arme est le slot tout en bas a gauche. On ne pourra donc placer une arme que sur ce slot et nulle part ailleurs. 
+Ce système d’équipement servira à l’avenir à donner au joueur les bonus des équipements qu’il porte en les rajoutant à ses statistiques de bases. Cela peut par exemple lui rajouter des points de vie, des points de dégât ou des points d’armure.
+Ces bonus seront appliqués au joueur et modifieront les dégâts que feront le joueur en combat ou les dégâts qu’il subira par les monstres (ou les joueurs adverses en PvP).
+
+              <br/>
+              <br/>
+              Le système de quête :
+              <br/>
+              <br/>
+              Les quêtes ont également été commencées. Nous avons actuellement créé la première quête. Elle se déclenche en parlant au forgeron d’une premier village, celui où le joueur apparaitra. Pour créer cette quête, il nous a fallût créer un script.
+Cette quête commence par un dialogue, pour déclencher ce dialogue, il suffit de s’approcher du forgeron et d’appuyer sur la touche d’action « e » par default. Le dialogue pourra démarrer si le joueur se trouve à l’intérieure d’une boite de collision « on trigger » située autour du forgeron et qu’il appuis sur la touche « e ». 
+Des variables booléennes ont été créées pour vérifier que chaque phrase a bien été dites et faire en sorte que le personnage non joueur ne les répètent pas à l’infini. 
+Lorsque le dialogue se finit, la quête se lance et un texte apparait en haut a droite de l’écran confirmant qu’une quête a bien démarrée. Le but de cette quête est de ramener du bois au forgeron.
+Pour cela nous avons créé un item « bois », avec la méthode expliquée plus haut, n’ayant pas de Sprite correspondant a du bois pour l’icone dans l’inventaire, nous nous sommes servis du logiciel « Gimp » pour arranger une image trouvée sur internet de façon à en faire une Icone au bon format.
+Une fois cet item créé, nous en avons posé une certaine quantité dans le village sous forme d’objet 3D que l’on peut ramasser le but étant d’en ramasser quelques-uns et de les rapporter au forgeron.
+La suite du dialogue du forgeron se déclenche uniquement si on détecte dans l’inventaire l’item bois (on le détecte grâce à son ID). Si c’est le cas, la quête se termine, le bois disparait de l’inventaire et on obtient la première arme du jeu. (Pour l’instant une épée mais ça dépendra de la classe du joueur, un archer obtiendra un arc).
+ L’épée courte donnée est aussi un item créé tout comme le bois. C’est un Item de type « Arme », elle peut donc être équipée et donne un bonus de 10 points de dégâts au joueur.
+
+
+              <br/>
+              <br/>
+              Adrien MOLLAT: <br/>
+              L'une des premières tâche a été de créer la map du jeu. Pour cela, des recherches ont été effectuées dans l'asset store du logiciel Unity pour trouver des textures ou objets pouvant servir a la création. Une fois trouvés les objets ont été posés sur la map et la création a pu commencer. Néanmoins, il a fallut tester qu'il n'y ai aucun bug. Pour cela , un personnage a été coder de facon a ce qu'il puisse se deplacer et j'ai pu remarquer certains problemes avec les collisions des objets, le personnages passant par exemple a travers les maisons. Ce probleme a été résolu en rajoutant des colliders aux objets.
+               <br/><br/><br/>
+            	Liens des images utilisées:
+             <br/>
+             -https://cdna.artstation.com/p/assets/images/images/005/879/388/large/ryan-lowe-maarit-new-enhanced-larger-smaller.jpg?1494415641
+             <br/>
+             -http://data.pixiz.com/output/user/frame/preview/api/big/5/4/8/2/2612845_96d96.jpg
+             <br/>
+             -http://www.bluemaize.net/im/arts-crafts-sewing/parchment-paper-8.jpg
+             <br/>
+             -https://wallpaperscraft.com/image/paper_background_cracks_wall_lights_50690_3840x2400.jpg
+             <br/>
+             <br/>
+             
+        </div>
+        <div id = "banner3">
+        	<p>HeavenStone</p>
+	    </div>
+    </body>
+</html>
